@@ -17,21 +17,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IKe-zW-kR1">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kIj-Ex-geB">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="5Z5-SU-A1j">
+                                    <size key="itemSize" width="90" height="90"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="2" minY="2" maxX="2" maxY="2"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UICollectionViewCell" id="E3K-mp-bYn" customClass="PhotoCollectionViewCell" customModule="Photorama" customModuleProvider="target">
+                                        <rect key="frame" x="2" y="66" width="90" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pgd-aB-tJk">
+                                                    <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                </imageView>
+                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="FfS-Xs-gw1">
+                                                    <rect key="frame" x="35" y="35" width="20" height="20"/>
+                                                </activityIndicatorView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="pgd-aB-tJk" secondAttribute="bottom" id="0QB-Cv-SpO"/>
+                                            <constraint firstItem="FfS-Xs-gw1" firstAttribute="centerX" secondItem="pgd-aB-tJk" secondAttribute="centerX" id="1uQ-Mt-Mba"/>
+                                            <constraint firstItem="pgd-aB-tJk" firstAttribute="top" secondItem="E3K-mp-bYn" secondAttribute="top" id="bML-nr-UzD"/>
+                                            <constraint firstAttribute="trailing" secondItem="pgd-aB-tJk" secondAttribute="trailing" id="l3D-Mk-K9P"/>
+                                            <constraint firstItem="pgd-aB-tJk" firstAttribute="leading" secondItem="E3K-mp-bYn" secondAttribute="leading" id="lbo-lX-Z2x"/>
+                                            <constraint firstItem="FfS-Xs-gw1" firstAttribute="centerY" secondItem="pgd-aB-tJk" secondAttribute="centerY" id="v2p-kk-oEs"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="pgd-aB-tJk" id="3XK-qc-7FX"/>
+                                            <outlet property="spinner" destination="FfS-Xs-gw1" id="37K-Xi-sBu"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IKe-zW-kR1" secondAttribute="bottom" id="DQm-VT-seR"/>
-                            <constraint firstAttribute="trailing" secondItem="IKe-zW-kR1" secondAttribute="trailing" id="Hc6-Fd-shX"/>
-                            <constraint firstItem="IKe-zW-kR1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ScF-Qf-bdx"/>
-                            <constraint firstItem="IKe-zW-kR1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qeQ-3I-7lv"/>
+                            <constraint firstItem="kIj-Ex-geB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4ca-Sv-ARu"/>
+                            <constraint firstAttribute="trailing" secondItem="kIj-Ex-geB" secondAttribute="trailing" id="h8E-uW-wLg"/>
+                            <constraint firstItem="kIj-Ex-geB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="mmo-qe-sct"/>
+                            <constraint firstAttribute="bottom" secondItem="kIj-Ex-geB" secondAttribute="bottom" id="tkk-Rh-eLS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Photorama" id="tvf-Wa-a66"/>
                     <connections>
-                        <outlet property="imageView" destination="IKe-zW-kR1" id="zj1-q2-tw4"/>
+                        <outlet property="collectionView" destination="kIj-Ex-geB" id="753-1c-f16"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
