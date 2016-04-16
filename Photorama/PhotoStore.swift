@@ -19,6 +19,9 @@ class PhotoStore {
         let url = FlickerAPI.recentPhotosUrl()
         let request = NSURLRequest(URL: url)
         let task = session.dataTaskWithRequest(request) { (data, response, error) in
+            let httpResponse = response as! NSHTTPURLResponse
+            print("Response code = \(httpResponse.statusCode)")
+            print("Response headers = \(httpResponse.allHeaderFields)")
             let result = self.processRecentPhotosRequest(data: data, error: error)
             completion(result)
         }
@@ -37,6 +40,10 @@ class PhotoStore {
         let request = NSURLRequest(URL: photoURL)
         let task = session.dataTaskWithRequest(request) {
             (data, response, error) -> Void in
+            
+            let httpResponse = response as! NSHTTPURLResponse
+            print("Response code = \(httpResponse.statusCode)")
+            print("Response headers = \(httpResponse.allHeaderFields)")
             let result = self.processImageRequest(data: data, error: error)
             if case let .Success(image) = result {
                 photo.image = image
