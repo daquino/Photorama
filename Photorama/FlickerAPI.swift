@@ -1,4 +1,5 @@
 import Foundation
+import CoreData
 
 enum Method: String {
     case RecentPhotos = "flickr.photos.getRecent"
@@ -48,7 +49,7 @@ struct FlickerAPI {
         return components.URL!
     }
     
-    static func photosFromJSONData(data: NSData) -> PhotosResult {
+    static func photosFromJSONData(data: NSData, inContext context: NSManagedObjectContext) -> PhotosResult {
         do {
             let jsonObject: AnyObject = try NSJSONSerialization.JSONObjectWithData(data, options: [])
             
@@ -60,7 +61,7 @@ struct FlickerAPI {
             }
             var finalPhotos = [Photo]()
             for photoJSON in photosArray {
-                if let photo = photoFromJSONObject(photoJSON) {
+                if let photo = photoFromJSONObject(photoJSON, inContext: context) {
                     finalPhotos.append(photo)
                 }
             }
@@ -74,7 +75,7 @@ struct FlickerAPI {
         }
     }
     
-    static func photoFromJSONObject(json: [String : AnyObject]) -> Photo? {
+    static func photoFromJSONObject(json: [String : AnyObject], inContext context: NSManagedObjectContext) -> Photo? {
         guard let
             photoId = json["id"] as? String,
             title = json["title"] as? String,
@@ -85,7 +86,27 @@ struct FlickerAPI {
                 return nil
         }
         
-        return Photo(title: title, photoId: photoId, remoteURL: url, dateTaken: dateTaken)
+        let fetchRequest = NSFetchRequest(entityName: "Photo")
+        let predicate = NSPredicate(format: "photoID == \(photoId)")
+        fetchRequest.predicate = predicate
+        
+        var fetchedPhotos: [Photo]!
+        context.performBlockAndWait { 
+            fetchedPhotos = try! context.executeFetchRequest(fetchRequest) as! [Photo]
+        }
+        if fetchedPhotos.count > 0 {
+            return fetchedPhotos.first
+        }
+        
+        var photo: Photo!
+        context.performBlockAndWait { 
+            photo = NSEntityDescription.insertNewObjectForEntityForName("Photo", inManagedObjectContext: context) as! Photo
+            photo.title = title
+            photo.photoID = photoId
+            photo.remoteURL = url
+            photo.dateTaken = dateTaken
+        }
+        return photo
         
     }
 }

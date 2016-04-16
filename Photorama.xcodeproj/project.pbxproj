@@ -14,10 +14,14 @@
 		5092C80B1CC27F24003409AC /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5092C80A1CC27F24003409AC /* PhotosViewController.swift */; };
 		5092C80D1CC28143003409AC /* FlickerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5092C80C1CC28143003409AC /* FlickerAPI.swift */; };
 		5092C80F1CC297D9003409AC /* PhotoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5092C80E1CC297D9003409AC /* PhotoStore.swift */; };
-		5092C8111CC29BB2003409AC /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5092C8101CC29BB2003409AC /* Photo.swift */; };
 		5092C8131CC2B332003409AC /* PhotoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5092C8121CC2B332003409AC /* PhotoDataSource.swift */; };
 		5092C8151CC2B5A9003409AC /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5092C8141CC2B5A9003409AC /* PhotoCollectionViewCell.swift */; };
 		5092C8171CC2C1FE003409AC /* PhotoInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5092C8161CC2C1FE003409AC /* PhotoInfoViewController.swift */; };
+		5092C81A1CC2DC71003409AC /* Photorama.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5092C8181CC2DC71003409AC /* Photorama.xcdatamodeld */; };
+		5092C81D1CC2DE3B003409AC /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5092C81B1CC2DE3B003409AC /* Photo+CoreDataProperties.swift */; };
+		5092C81E1CC2DE3B003409AC /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5092C81C1CC2DE3B003409AC /* Photo.swift */; };
+		5092C8201CC2DFEB003409AC /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5092C81F1CC2DFEB003409AC /* CoreDataStack.swift */; };
+		5092C8241CC30799003409AC /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5092C8231CC30799003409AC /* ImageStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,10 +34,14 @@
 		5092C80A1CC27F24003409AC /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		5092C80C1CC28143003409AC /* FlickerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickerAPI.swift; sourceTree = "<group>"; };
 		5092C80E1CC297D9003409AC /* PhotoStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStore.swift; sourceTree = "<group>"; };
-		5092C8101CC29BB2003409AC /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		5092C8121CC2B332003409AC /* PhotoDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDataSource.swift; sourceTree = "<group>"; };
 		5092C8141CC2B5A9003409AC /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		5092C8161CC2C1FE003409AC /* PhotoInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoInfoViewController.swift; sourceTree = "<group>"; };
+		5092C8191CC2DC71003409AC /* Photorama.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photorama.xcdatamodel; sourceTree = "<group>"; };
+		5092C81B1CC2DE3B003409AC /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5092C81C1CC2DE3B003409AC /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		5092C81F1CC2DFEB003409AC /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		5092C8231CC30799003409AC /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,7 @@
 		5092C7F71CC27EFB003409AC /* Photorama */ = {
 			isa = PBXGroup;
 			children = (
+				5092C8231CC30799003409AC /* ImageStore.swift */,
 				5092C7F81CC27EFB003409AC /* AppDelegate.swift */,
 				5092C7FC1CC27EFB003409AC /* Main.storyboard */,
 				5092C7FF1CC27EFB003409AC /* Assets.xcassets */,
@@ -74,10 +83,13 @@
 				5092C80A1CC27F24003409AC /* PhotosViewController.swift */,
 				5092C80C1CC28143003409AC /* FlickerAPI.swift */,
 				5092C80E1CC297D9003409AC /* PhotoStore.swift */,
-				5092C8101CC29BB2003409AC /* Photo.swift */,
 				5092C8121CC2B332003409AC /* PhotoDataSource.swift */,
 				5092C8141CC2B5A9003409AC /* PhotoCollectionViewCell.swift */,
 				5092C8161CC2C1FE003409AC /* PhotoInfoViewController.swift */,
+				5092C8181CC2DC71003409AC /* Photorama.xcdatamodeld */,
+				5092C81B1CC2DE3B003409AC /* Photo+CoreDataProperties.swift */,
+				5092C81C1CC2DE3B003409AC /* Photo.swift */,
+				5092C81F1CC2DFEB003409AC /* CoreDataStack.swift */,
 			);
 			path = Photorama;
 			sourceTree = "<group>";
@@ -155,12 +167,16 @@
 			files = (
 				5092C80B1CC27F24003409AC /* PhotosViewController.swift in Sources */,
 				5092C7F91CC27EFB003409AC /* AppDelegate.swift in Sources */,
+				5092C81A1CC2DC71003409AC /* Photorama.xcdatamodeld in Sources */,
 				5092C80F1CC297D9003409AC /* PhotoStore.swift in Sources */,
+				5092C81E1CC2DE3B003409AC /* Photo.swift in Sources */,
 				5092C8131CC2B332003409AC /* PhotoDataSource.swift in Sources */,
+				5092C8201CC2DFEB003409AC /* CoreDataStack.swift in Sources */,
 				5092C8151CC2B5A9003409AC /* PhotoCollectionViewCell.swift in Sources */,
+				5092C81D1CC2DE3B003409AC /* Photo+CoreDataProperties.swift in Sources */,
 				5092C8171CC2C1FE003409AC /* PhotoInfoViewController.swift in Sources */,
 				5092C80D1CC28143003409AC /* FlickerAPI.swift in Sources */,
-				5092C8111CC29BB2003409AC /* Photo.swift in Sources */,
+				5092C8241CC30799003409AC /* ImageStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +328,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5092C8181CC2DC71003409AC /* Photorama.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5092C8191CC2DC71003409AC /* Photorama.xcdatamodel */,
+			);
+			currentVersion = 5092C8191CC2DC71003409AC /* Photorama.xcdatamodel */;
+			path = Photorama.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5092C7ED1CC27EFB003409AC /* Project object */;
 }
