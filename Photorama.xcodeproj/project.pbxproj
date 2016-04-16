@@ -17,6 +17,7 @@
 		5092C8111CC29BB2003409AC /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5092C8101CC29BB2003409AC /* Photo.swift */; };
 		5092C8131CC2B332003409AC /* PhotoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5092C8121CC2B332003409AC /* PhotoDataSource.swift */; };
 		5092C8151CC2B5A9003409AC /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5092C8141CC2B5A9003409AC /* PhotoCollectionViewCell.swift */; };
+		5092C8171CC2C1FE003409AC /* PhotoInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5092C8161CC2C1FE003409AC /* PhotoInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		5092C8101CC29BB2003409AC /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		5092C8121CC2B332003409AC /* PhotoDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDataSource.swift; sourceTree = "<group>"; };
 		5092C8141CC2B5A9003409AC /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		5092C8161CC2C1FE003409AC /* PhotoInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				5092C8101CC29BB2003409AC /* Photo.swift */,
 				5092C8121CC2B332003409AC /* PhotoDataSource.swift */,
 				5092C8141CC2B5A9003409AC /* PhotoCollectionViewCell.swift */,
+				5092C8161CC2C1FE003409AC /* PhotoInfoViewController.swift */,
 			);
 			path = Photorama;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 				5092C80F1CC297D9003409AC /* PhotoStore.swift in Sources */,
 				5092C8131CC2B332003409AC /* PhotoDataSource.swift in Sources */,
 				5092C8151CC2B5A9003409AC /* PhotoCollectionViewCell.swift in Sources */,
+				5092C8171CC2C1FE003409AC /* PhotoInfoViewController.swift in Sources */,
 				5092C80D1CC28143003409AC /* FlickerAPI.swift in Sources */,
 				5092C8111CC29BB2003409AC /* Photo.swift in Sources */,
 			);

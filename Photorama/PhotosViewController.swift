@@ -37,4 +37,15 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
             }
         }
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowPhoto" {
+            if let selectedIndexPath = collectionView.indexPathsForSelectedItems()?.first {
+                let photo = photoDataSource.photos[selectedIndexPath.row]
+                let destinationViewController = segue.destinationViewController as! PhotoInfoViewController
+                destinationViewController.photo = photo
+                destinationViewController.store = store
+            }
+        }
+    }
 }
