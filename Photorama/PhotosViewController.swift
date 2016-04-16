@@ -1,6 +1,6 @@
 import UIKit
 
-class PhotosViewController: UIViewController, UICollectionViewDelegate {
+class PhotosViewController: UIViewController, UICollectionViewDelegateFlowLayout {
     @IBOutlet var collectionView: UICollectionView!
     var store: PhotoStore!
     let photoDataSource = PhotoDataSource()
@@ -47,5 +47,18 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
                 destinationViewController.store = store
             }
         }
+    }
+    
+    override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
+        collectionView.collectionViewLayout.invalidateLayout()
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        let width = (view.frame.size.width-40) / 4
+        return CGSize(width: width, height: width)
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 20, left: 10, bottom: 20, right: 10)
     }
 }
