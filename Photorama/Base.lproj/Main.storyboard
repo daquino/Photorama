@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nJU-ys-Gc2">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Photorama-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PhotosViewController" customModule="Photorama" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IKe-zW-kR1">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IKe-zW-kR1" secondAttribute="bottom" id="DQm-VT-seR"/>
+                            <constraint firstAttribute="trailing" secondItem="IKe-zW-kR1" secondAttribute="trailing" id="Hc6-Fd-shX"/>
+                            <constraint firstItem="IKe-zW-kR1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ScF-Qf-bdx"/>
+                            <constraint firstItem="IKe-zW-kR1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qeQ-3I-7lv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Photorama" id="tvf-Wa-a66"/>
+                    <connections>
+                        <outlet property="imageView" destination="IKe-zW-kR1" id="zj1-q2-tw4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1117" y="387"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sX5-gF-uEA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nJU-ys-Gc2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qhg-aR-nNy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="LoG-eE-qgY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RXh-Un-8tb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="1047"/>
+        </scene>
+    </scenes>
+</document>
