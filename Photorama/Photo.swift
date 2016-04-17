@@ -13,5 +13,9 @@ class Photo: NSManagedObject {
         photoKey = NSUUID().UUIDString
         dateTaken = NSDate()
     }
+    
+    func incrementViewCount() {
+        viewCount = NSNumber(integer: viewCount.integerValue+1)
+    }
 
 }

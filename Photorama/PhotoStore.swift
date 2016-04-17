@@ -112,4 +112,8 @@ class PhotoStore {
         return photos
     }
     
+    func saveChanges() {
+        try! self.coreDataStack.saveChanges()
+    }
+    
 }

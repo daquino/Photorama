@@ -92,19 +92,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O2d-MY-0ji">
-                                <rect key="frame" x="20" y="64" width="560" height="536"/>
+                                <rect key="frame" x="20" y="64" width="560" height="495"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Views: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFt-Z6-Zba">
+                                <rect key="frame" x="225" y="569" width="150.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dkq-AJ-ot8" firstAttribute="top" secondItem="O2d-MY-0ji" secondAttribute="bottom" id="7Gt-Q0-G6P"/>
                             <constraint firstItem="O2d-MY-0ji" firstAttribute="leading" secondItem="b9c-M6-5nl" secondAttribute="leadingMargin" id="FgF-lP-gRT"/>
+                            <constraint firstItem="KFt-Z6-Zba" firstAttribute="centerX" secondItem="b9c-M6-5nl" secondAttribute="centerX" id="PPA-an-iV2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="O2d-MY-0ji" secondAttribute="trailing" id="RQF-VK-eTe"/>
+                            <constraint firstItem="dkq-AJ-ot8" firstAttribute="top" secondItem="KFt-Z6-Zba" secondAttribute="bottom" constant="10" id="Rqf-tH-cDY"/>
                             <constraint firstItem="O2d-MY-0ji" firstAttribute="top" secondItem="Ajo-eY-8cZ" secondAttribute="bottom" id="l0O-YE-I6a"/>
+                            <constraint firstItem="KFt-Z6-Zba" firstAttribute="top" secondItem="O2d-MY-0ji" secondAttribute="bottom" constant="10" id="vSU-Jz-w4D"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="O2d-MY-0ji" id="StC-wE-JCo"/>
+                        <outlet property="viewCountLabel" destination="KFt-Z6-Zba" id="U53-12-HZQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dGy-pe-q8T" userLabel="First Responder" sceneMemberID="firstResponder"/>

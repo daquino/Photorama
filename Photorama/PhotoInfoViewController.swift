@@ -2,6 +2,7 @@ import UIKit
 
 class PhotoInfoViewController: UIViewController {
     @IBOutlet var imageView: UIImageView!
+    @IBOutlet var viewCountLabel: UILabel!
     
     var photo: Photo! {
         didSet {
@@ -14,6 +15,9 @@ class PhotoInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        photo.incrementViewCount()
+        store.saveChanges()
+        
         store.fetchImageForPhoto(photo) { (imageResult) in
             switch imageResult {
             case let .Success(image):
@@ -24,5 +28,6 @@ class PhotoInfoViewController: UIViewController {
                 print("Error fetching image for photo: \(error)")
             }
         }
+        viewCountLabel.text = "Number of views: \(photo.viewCount.integerValue)"
     }
 }
