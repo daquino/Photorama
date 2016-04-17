@@ -22,6 +22,8 @@
 		5092C81E1CC2DE3B003409AC /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5092C81C1CC2DE3B003409AC /* Photo.swift */; };
 		5092C8201CC2DFEB003409AC /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5092C81F1CC2DFEB003409AC /* CoreDataStack.swift */; };
 		5092C8241CC30799003409AC /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5092C8231CC30799003409AC /* ImageStore.swift */; };
+		5092C8261CC33611003409AC /* TagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5092C8251CC33611003409AC /* TagsViewController.swift */; };
+		5092C8281CC33672003409AC /* TagDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5092C8271CC33672003409AC /* TagDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		5092C81C1CC2DE3B003409AC /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		5092C81F1CC2DFEB003409AC /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		5092C8231CC30799003409AC /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
+		5092C8251CC33611003409AC /* TagsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsViewController.swift; sourceTree = "<group>"; };
+		5092C8271CC33672003409AC /* TagDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 				5092C81B1CC2DE3B003409AC /* Photo+CoreDataProperties.swift */,
 				5092C81C1CC2DE3B003409AC /* Photo.swift */,
 				5092C81F1CC2DFEB003409AC /* CoreDataStack.swift */,
+				5092C8251CC33611003409AC /* TagsViewController.swift */,
+				5092C8271CC33672003409AC /* TagDataSource.swift */,
 			);
 			path = Photorama;
 			sourceTree = "<group>";
@@ -171,10 +177,12 @@
 				5092C80F1CC297D9003409AC /* PhotoStore.swift in Sources */,
 				5092C81E1CC2DE3B003409AC /* Photo.swift in Sources */,
 				5092C8131CC2B332003409AC /* PhotoDataSource.swift in Sources */,
+				5092C8261CC33611003409AC /* TagsViewController.swift in Sources */,
 				5092C8201CC2DFEB003409AC /* CoreDataStack.swift in Sources */,
 				5092C8151CC2B5A9003409AC /* PhotoCollectionViewCell.swift in Sources */,
 				5092C81D1CC2DE3B003409AC /* Photo+CoreDataProperties.swift in Sources */,
 				5092C8171CC2C1FE003409AC /* PhotoInfoViewController.swift in Sources */,
+				5092C8281CC33672003409AC /* TagDataSource.swift in Sources */,
 				5092C80D1CC28143003409AC /* FlickerAPI.swift in Sources */,
 				5092C8241CC30799003409AC /* ImageStore.swift in Sources */,
 			);
@@ -326,6 +334,7 @@
 				5092C8091CC27EFB003409AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
